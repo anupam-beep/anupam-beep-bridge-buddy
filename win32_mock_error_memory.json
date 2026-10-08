@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "status": "CANDIDATE_NOT_CERTIFIED",
+  "lessons": [
+    {"code": "WIN_SIMULATOR_NOT_OS", "trigger": "Win32 API mock tests pass on Linux", "rule": "Do not label this native Windows validation; keep runtime gate blocked"},
+    {"code": "WIN_CLEANUP_ON_FAILURE", "trigger": "An exception occurs after opening ancestor handles", "rule": "Close every successfully opened handle in reverse order"},
+    {"code": "WIN_REPARSE_ANCESTOR", "trigger": "Root or ancestor has reparse-point attribute", "rule": "Reject immediately and do not proceed to descendant reads"},
+    {"code": "WIN_SHORT_READ", "trigger": "ReadFile returns EOF before declared size", "rule": "Fail closed on size mismatch rather than accept a partial digest"},
+    {"code": "WIN_IDENTITY_DRIFT", "trigger": "Volume, file index, timestamps or attributes change during capture", "rule": "Reject snapshot; stable metadata is still not cryptographic authenticity"},
+    {"code": "WIN_MOCK_ABI", "trigger": "ctypes.wintypes is used on non-Windows Python", "rule": "Do not assume native Win32 type sizes or behavior from Linux simulator"},
+    {"code": "WIN_RESULT_CERTIFICATION", "trigger": "A hash-only snapshot is mistaken for a Civil NX result", "rule": "Require independent completion evidence and authentic numerical table before engineering certification"}
+  ]
+}

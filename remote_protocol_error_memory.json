@@ -1,0 +1,13 @@
+{
+  "skill": "offline_remote_authority_protocol_and_high_water_witness",
+  "status": "OFFLINE_TESTED_NOT_DEPLOYED",
+  "lessons": [
+    "An in-process wire adapter is not an independently hosted remote authority.",
+    "HTTP or JSON parse success alone does not prove message integrity or authentication.",
+    "Reject duplicate JSON keys and noncanonical signed-body bytes.",
+    "A signed witness without an independently pinned fingerprint is replayable after compromise.",
+    "Bind witness to authority, store, client, checkpoint, and bounded validity interval.",
+    "Never derive an out-of-band trust pin from the same local store being verified.",
+    "An authenticated checkpoint is not proof of completed Civil NX analysis or engineering acceptance."
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "skill_id": "encrypted_original_byte_escrow_and_handoff_binding",
+  "version": "0.1-offline",
+  "classification": "candidate_not_certified",
+  "knowledge_inputs": [
+    "README_ORIGINAL_BYTE_ESCROW.md",
+    "README_READ_ONLY_HANDOFF.md",
+    "README_BUNDLE_HANDOFF_INTEGRATION.md"
+  ],
+  "approved_external_manuals_ingested_this_cycle": 0,
+  "preconditions": [
+    "synthetic or explicitly authorized evidence",
+    "independently supplied 32-byte key not persisted with evidence",
+    "trusted POSIX parent directory with private 0700 escrow directory",
+    "independently supplied v1 handoff manifest"
+  ],
+  "actions": [
+    "encrypt raw request/response bytes using AES-256-GCM with fresh random nonce",
+    "store ciphertext using private, no-clobber atomic publication",
+    "verify ciphertext authenticity and hash/run/capture binding",
+    "return reason codes and offline-only statuses without exposing secrets"
+  ],
+  "forbidden_actions": [
+    "network or Civil NX access",
+    "production modification or model write/save",
+    "using bundle-defined trust pins",
+    "returning original plaintext from verification",
+    "engineering acceptance or automated promotion"
+  ],
+  "dojo_suites": [
+    "test_offline_original_byte_escrow.py",
+    "test_offline_escrow_handoff_integration.py"
+  ],
+  "certification": "OFFLINE_TESTED_NOT_DEPLOYED",
+  "deployment_blockers": [
+    "Windows ACL and atomic storage review",
+    "independent key management and rotation",
+    "independent collector/witness and actual completed-analysis evidence",
+    "operator approval and security review"
+  ]
+}

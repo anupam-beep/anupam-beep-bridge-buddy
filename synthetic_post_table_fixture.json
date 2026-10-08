@@ -1,0 +1,7 @@
+{
+  "method": "POST",
+  "path": "/post/TABLE",
+  "http_status": 200,
+  "request_body": {"Argument": {"TABLE_TYPE": "BEAMFORCE", "LOAD_CASE_NAMES": ["DL(ST)"]}},
+  "response_body": {"empty": {"HEAD": ["Index", "Beam", "Moment-y"], "DATA": [[1, 101, 20.5]]}}
+}

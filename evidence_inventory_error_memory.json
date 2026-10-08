@@ -1,0 +1,16 @@
+{
+  "skill_id": "civil_nx_offline_evidence_inventory_e1_e7",
+  "status": "CANDIDATE_NOT_CERTIFIED",
+  "lessons": [
+    {"id": "INV-01", "failure": "File hash matches a user-supplied digest", "rule": "Never promote a matching hash to independently authenticated provenance."},
+    {"id": "INV-02", "failure": "Archive contains files named analysis_complete or result", "rule": "Filename/metadata is not proof of an actual completed analysis or numeric result."},
+    {"id": "INV-03", "failure": "Manifest claims E1 through E7", "rule": "A claim cannot self-certify its own signature, independent trust or engineering acceptance."},
+    {"id": "INV-04", "failure": "Traversal or symlink in evidence path", "rule": "Reject rather than follow references outside the bounded evidence root."},
+    {"id": "INV-05", "failure": "Duplicate JSON keys or case-insensitive duplicate filenames", "rule": "Reject ambiguous provenance maps."},
+    {"id": "INV-06", "failure": "Missing file coexists with matching files", "rule": "Mark gate incomplete and stop; do not silently treat partial evidence as complete."},
+    {"id": "INV-07", "failure": "ZIP has extreme compression ratio or invalid metadata", "rule": "Reject without extraction; never execute packaged code."},
+    {"id": "INV-08", "failure": "Sensitive HTTP bytes included in evidence", "rule": "Hash locally only and emit codes/counts, not payloads, IDs or paths."},
+    {"id": "INV-09", "failure": "HTTP 200 with empty message is treated as numerical output", "rule": "Require actual HEAD/DATA numeric rows plus authenticated E1-E6 before any E7 review."},
+    {"id": "INV-10", "failure": "Concurrent adversarial filesystem mutation", "rule": "Offline inventory is not a secure filesystem boundary; production integration requires hardened directory-handle based reads and external attestation."}
+  ]
+}

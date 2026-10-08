@@ -1,0 +1,12 @@
+{
+  "candidate_skill": "two_phase_checkpoint_registration_and_crash_recovery",
+  "status": "OFFLINE_TESTED_NOT_DEPLOYED",
+  "errors": [
+    {"code": "APPENDED_BUT_UNPINNED", "rule": "Never treat a local append as certified before an authenticated external high-water commit; reconcile after interruption."},
+    {"code": "EXTERNAL_PREPARED_NO_LOCAL_APPEND", "rule": "Abort only an exact matching reservation when the local registry still equals the old checkpoint."},
+    {"code": "EXTERNAL_COMMITTED_WITHOUT_LOCAL_APPEND", "rule": "Fail closed; do not silently rewrite either checkpoint."},
+    {"code": "PENDING_TRANSACTION_REENTRY", "rule": "Block new appends until an interrupted transaction has been explicitly reconciled under exclusive coordinator lock."},
+    {"code": "CROSS_HOST_WRITER_RACE", "rule": "A local SQLite lock is not a distributed lock; require independent conditional writes and a distributed lock or single writer."},
+    {"code": "FAKE_PIN_STORE_NOT_INDEPENDENT", "rule": "A synthetic in-memory pin-store PASS is not deployment or genuine provenance evidence."}
+  ]
+}

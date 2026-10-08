@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "skill_id": "windows_native_synthetic_gate_and_sharing_dojo",
+  "source_type": "inherited_candidate_code_plus_offline_adversarial_tests",
+  "external_manuals_ingested": 0,
+  "training_status": "OFFLINE_TESTED_NOT_DEPLOYED",
+  "competency_status": "NOT_CERTIFIED",
+  "objective": "Prevent simulated Win32 API tests from being mistaken for native Windows security validation; verify file sharing and rename-denial behavior on a Windows host before promotion",
+  "input_artifacts": ["offline_snapshot_reader.py", "test_windows_snapshot_runtime.py", "offline_windows_dojo_gate.py", "test_offline_windows_dojo_gate.py"],
+  "dojo": {
+    "new_native_only_scenarios": 2,
+    "new_cross_platform_gate_scenarios": 45,
+    "test_gates": ["exact_suite_counts", "native_suite_no_skips", "allowed_skip_whitelist", "zero_failures_errors", "source_lock_integrity", "no_engineering_acceptance", "no_civil_nx_calls", "no_model_writes"],
+    "native_windows_runtime": "NOT_RUN",
+    "external_analysis_result": "UNVERIFIED"
+  },
+  "independent_verification": {
+    "source_lock_authenticity": "SELF_DECLARED_NOT_INDEPENDENT",
+    "synthetic_runtime_security": "NOT_CERTIFIED",
+    "civil_nx_post_table_result": "NOT_VERIFIED"
+  },
+  "promotion_gates": [
+    "Native Windows isolated test runner completes with zero native-suite skips",
+    "Independent Windows filesystem and race-condition security review",
+    "Authentic completed-analysis and numerical Civil NX result evidence",
+    "Human approval before production promotion or engineering use"
+  ]
+}

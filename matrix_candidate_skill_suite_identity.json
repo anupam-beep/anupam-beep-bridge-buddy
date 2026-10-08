@@ -1,0 +1,31 @@
+{
+  "competency_status": "NOT_CERTIFIED",
+  "dojo": {
+    "cases_bound": 102,
+    "linux_unittest": "549 PASS, 13 SKIPPED, 0 FAIL",
+    "native_windows": "NOT_RUN",
+    "new_adversarial_cases": 10,
+    "suite_identity_pins": 5
+  },
+  "independent_verification": {
+    "civil_nx_results": "UNVERIFIED",
+    "source_authenticity": "SELF_DECLARED_NOT_INDEPENDENT"
+  },
+  "inputs": [
+    "offline_windows_dojo_gate.py",
+    "test_offline_windows_dojo_gate.py",
+    "windows_native_suite_lock.json"
+  ],
+  "manuals_ingested": 0,
+  "objective": "Reject test suites with correct case counts but missing, substituted, or duplicated identities; bind execution to discovered identities.",
+  "promotion_gates": [
+    "Native Windows execution",
+    "Independent review of Windows file safety",
+    "Authentic numerical analysis result evidence",
+    "Human approval for production/engineering use"
+  ],
+  "schema_version": 1,
+  "skill_id": "windows_native_test_identity_binding",
+  "source_type": "candidate_code_plus_synthetic_dojo",
+  "training_status": "OFFLINE_TESTED_NOT_DEPLOYED"
+}

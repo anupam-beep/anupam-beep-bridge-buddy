@@ -1,0 +1,13 @@
+{
+  "skill_id": "sanitized_bundle_to_independent_handoff_gate",
+  "version": "0.1-offline",
+  "classification": "candidate_not_certified",
+  "knowledge_inputs": ["README_CAPTURE_BUNDLE_INTAKE.md", "README_READ_ONLY_HANDOFF.md", "README_BUNDLE_HANDOFF_INTEGRATION.md"],
+  "approved_external_manuals_ingested_this_cycle": 0,
+  "preconditions": ["offline sanitized evidence ZIP", "independent trusted handoff manifest", "independently pinned signing keys", "anchored registry policy", "synthetic or explicitly approved read-only evidence"],
+  "actions": ["validate bounded ZIP and secrets", "decode signed record wrappers", "bind exact byte hashes", "verify signed evidence and anchored inclusion", "report offline status only"],
+  "forbidden_actions": ["network request", "Civil NX analysis", "Civil NX write/save", "production promotion", "engineering acceptance"],
+  "dojo_suite": "test_offline_bundle_handoff_pipeline.py",
+  "certification": "OFFLINE_TESTED_NOT_DEPLOYED",
+  "unresolved": "No authentic completed analysis or numerical POST/TABLE response and no independently deployed witness/trust authority."
+}

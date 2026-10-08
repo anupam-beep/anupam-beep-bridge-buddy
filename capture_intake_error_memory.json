@@ -1,0 +1,14 @@
+{
+  "candidate_skill": "sanitized_capture_bundle_intake_gate",
+  "status": "OFFLINE_TESTED_NOT_DEPLOYED",
+  "lessons": [
+    "Do not unzip untrusted capture archives to disk; inspect ZIP metadata and read bounded streams.",
+    "Reject duplicate ZIP member names and path traversal before parsing evidence.",
+    "Reject ZIP symlinks, oversized members, decompression bombs, malformed JSON and duplicate JSON keys.",
+    "A claimed MIME type is not evidence of content validity; parse JSON and require the expected root shape.",
+    "Credential screening must include MAPI-Key and Authorization, and must never echo matching secret bytes.",
+    "Sanitized capture copies do not prove exact request bytes used on the wire.",
+    "An intake PASS is not a signed-attestation, independent-capture, numerical-result or engineering acceptance PASS.",
+    "HTTP 200 with an empty message cannot establish completed Civil NX analysis or numerical result extraction."
+  ]
+}

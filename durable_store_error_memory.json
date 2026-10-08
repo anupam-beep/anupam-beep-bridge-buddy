@@ -1,0 +1,9 @@
+[
+  {"id":"PIN-021","failure":"A durable local SQLite store can be rolled back with its database", "guard":"Require independently preserved high-water pin; reject lower count or mismatched equal-count head"},
+  {"id":"PIN-022","failure":"Unsigned or altered command may request unauthorized pin transition", "guard":"Require Ed25519 client signature, pinned client identity and exact canonical request"},
+  {"id":"PIN-023","failure":"Forged, tampered or replayed server reply may look successful", "guard":"Verify server signature, pinned server identity, unique request ID and exact request SHA-256 binding"},
+  {"id":"PIN-024","failure":"A restart may lose an in-memory prepared reservation", "guard":"Persist PREPARED/COMMITTED/ABORTED transaction states and verify restart recovery"},
+  {"id":"PIN-025","failure":"Repeated request ID with altered payload can bypass idempotence assumptions", "guard":"Persist signed request digest and reject request-ID reuse with a different digest"},
+  {"id":"PIN-026","failure":"SQLite WAL and a local signer may be mistaken for an independent external authority", "guard":"Explicit OFFLINE_TESTED_NOT_DEPLOYED status and no engineering acceptance"},
+  {"id":"PIN-027","failure":"Client may accept stale signed checkpoint after server rollback", "guard":"Compare signed snapshot with separately supplied independent high-water checkpoint"}
+]

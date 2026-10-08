@@ -1,0 +1,62 @@
+{
+  "blockers": [
+    "No native Windows test execution in this environment",
+    "No independently authenticated Civil NX completed-analysis and numerical POST/TABLE response evidence"
+  ],
+  "civil_nx": {
+    "analysis_runs": 0,
+    "authentic_numerical_post_table": "NOT_AVAILABLE_IN_REVIEWED_PACKAGE",
+    "calls": 0,
+    "model_saves": 0,
+    "model_writes": 0,
+    "root_cause": "UNDETERMINED"
+  },
+  "completed": [
+    "Pinned exact unittest test identities for five Windows synthetic suites (102 tests), beyond count-only checks",
+    "Added fail-closed discovery validation and actual-execution identity tracking",
+    "Added 10 adversarial identity/report tests",
+    "Regenerated self-declared candidate source lock for two changed files",
+    "Verified inherited ZIP integrity and all 114 entries of its SHA256 manifest"
+  ],
+  "cycle_local": "2026-10-08 23:00 Asia/Kolkata",
+  "inherited_archive": {
+    "manifest_sha256_failed": 0,
+    "manifest_sha256_verified": 114,
+    "zip_crc_check": "PASS",
+    "zip_members": 115
+  },
+  "matrix_learning": {
+    "candidate_skill": "windows_native_test_identity_binding",
+    "certification": "NOT_CERTIFIED",
+    "new_error_memory_rules": 6,
+    "new_external_manuals_ingested": 0,
+    "status": "OFFLINE_TESTED_NOT_DEPLOYED"
+  },
+  "next_priority": "Run the isolated synthetic suite on native Windows, verify exact test identities and investigate failures before any promotion",
+  "risks": [
+    "Self-declared hashes and test identities are not independent authenticity evidence",
+    "Linux tests cannot validate Windows filesystem behavior",
+    "Test identity binding cannot prevent a malicious change to both code and self-declared locks"
+  ],
+  "safety": {
+    "engineering_acceptance": false,
+    "live_model_access": false,
+    "production_changes": 0
+  },
+  "schema": "bridgeagent_offline_cycle_v1",
+  "scope": "CANDIDATE_OFFLINE_ONLY",
+  "tests": {
+    "compile": "PASS",
+    "discovered": 562,
+    "errors": 0,
+    "failed": 0,
+    "host": "Linux",
+    "native_suite_cases": 102,
+    "native_suite_identity_pins": 5,
+    "native_windows_executed": false,
+    "new_tests": 10,
+    "passed": 549,
+    "skipped": 13
+  },
+  "user_intervention": "Not needed for continued offline work; a Windows machine is needed for native validation"
+}

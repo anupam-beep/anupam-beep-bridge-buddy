@@ -1,0 +1,13 @@
+{
+  "candidate_skill": "read_only_result_evidence_handoff",
+  "status": "OFFLINE_TESTED_NOT_DEPLOYED",
+  "lessons": [
+    "A successful HTTP status with an empty message is not a numerical result.",
+    "A signed capture receipt is not an independent checkpoint inclusion proof.",
+    "A valid registry hash chain without independently pinned high-water evidence permits rollback.",
+    "The submitted evidence must not supply its own trust anchors or high-water policy.",
+    "Manifest hashes must bind the exact in-memory request and response bytes, not a reserialized approximation.",
+    "Do not store raw HTTP headers, MAPI credentials, or model contents in a handoff manifest.",
+    "Synthetic cryptographic verification is not proof of Civil NX execution or engineering adequacy."
+  ]
+}

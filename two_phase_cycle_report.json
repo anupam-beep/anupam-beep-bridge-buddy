@@ -1,0 +1,46 @@
+{
+  "cycle": "2026-10-08 08:55 IST \u2014 offline two-phase checkpoint registration and crash recovery",
+  "completed": [
+    "Implemented persistent PREPARED/COMMITTED/ABORTED checkpoint journal around signed-receipt registry append and simulated external CAS pinning.",
+    "Implemented fail-closed recovery for prepare failures, append/commit gaps, committed-but-unjournaled state, rollback and conflicting external reservations.",
+    "Added same-host SQLite coordinator lock and refused new append while a pending transaction exists.",
+    "Verified 14/14 unchanged files from prior artifact against SHA-256 manifest."
+  ],
+  "tests": {
+    "passed": 124,
+    "total": 124,
+    "new": 17,
+    "previous": 107,
+    "command": "python -m unittest discover -v",
+    "fixture_type": "synthetic/offline",
+    "compileall": "PASS",
+    "prior_sha256_integrity": "14/14 PASS"
+  },
+  "matrix_learning": {
+    "candidate_skill": "two_phase_checkpoint_registration_and_crash_recovery",
+    "status": "OFFLINE_TESTED_NOT_DEPLOYED",
+    "error_memory_rules": 6
+  },
+  "certification": {
+    "synthetic_offline_gates": "PASS",
+    "independent_external_trust_store": "NOT_DEPLOYED",
+    "genuine_civil_nx_analysis": "NOT_EVIDENCED",
+    "engineering_acceptance": "BLOCKED"
+  },
+  "blocker": "No independently authenticated durable external pin store, actual Civil NX completed-analysis evidence, or independently captured numerical results.",
+  "risks": [
+    "FakePinStore is synthetic and provides no independent trust or durability.",
+    "Same-host SQLite coordinator lock does not protect multiple hosts.",
+    "Crash-safe coordination relies on external CAS/idempotence and durable authenticated external records, not yet integration-tested."
+  ],
+  "safety": {
+    "civil_nx_calls": 0,
+    "analysis_runs": 0,
+    "model_writes": 0,
+    "saves": 0,
+    "production_modifications": 0,
+    "user_repository_modified": false
+  },
+  "single_next_priority": "Implement an offline authenticated durable pin-store adapter contract and test independent restart/replay semantics before any Civil NX integration.",
+  "user_intervention_required": false
+}

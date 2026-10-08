@@ -1,0 +1,23 @@
+{
+  "archive_entries": 68,
+  "authentic_capture_confirmed": false,
+  "classified_file_counts": {
+    "candidate_code": 13,
+    "cycle_report": 9,
+    "manifest": 5,
+    "other": 26,
+    "synthetic_fixture": 1,
+    "test": 14
+  },
+  "gate_status": {
+    "E1": "NOT_ESTABLISHED_BY_ARCHIVE_METADATA",
+    "E2": "NOT_ESTABLISHED_BY_ARCHIVE_METADATA",
+    "E3": "NOT_ESTABLISHED_BY_ARCHIVE_METADATA",
+    "E4": "NOT_ESTABLISHED_BY_ARCHIVE_METADATA",
+    "E5": "NOT_ESTABLISHED_BY_ARCHIVE_METADATA",
+    "E6": "NOT_ESTABLISHED_BY_ARCHIVE_METADATA",
+    "E7": "NOT_ESTABLISHED_BY_ARCHIVE_METADATA"
+  },
+  "note_code": "ARCHIVE_METADATA_IS_NOT_ANALYSIS_EVIDENCE",
+  "status": "OFFLINE_INVENTORY_ONLY_NOT_CERTIFIED"
+}

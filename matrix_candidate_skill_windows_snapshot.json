@@ -1,0 +1,24 @@
+{
+  "skill_id": "civil_nx_portable_race_resistant_evidence_snapshot",
+  "version": "0.1-candidate",
+  "status": "OFFLINE_TESTED_ON_LINUX_NOT_DEPLOYED",
+  "source_class": "inherited_offline_artifacts_and_local_synthetic_tests",
+  "approved_external_manuals_ingested_this_cycle": 0,
+  "learning_objectives": [
+    "bound all evidence file reads",
+    "reject directory traversal and Windows unsafe path syntax",
+    "pin directory/file handles and reject reparse points",
+    "detect common file changes during hashing",
+    "preserve strict separation of integrity, authenticity, and engineering acceptance"
+  ],
+  "dojo": {"new_test_methods": 26, "total_offline_regression": 431, "passed": 431, "environment": "Linux"},
+  "certification": {
+    "candidate_quality_gate": "LINUX_OFFLINE_REGRESSION_PASS",
+    "windows_validation": "NOT_RUN",
+    "authentic_civil_nx_evidence": "NOT_AVAILABLE",
+    "external_provenance": "NOT_ESTABLISHED",
+    "engineering_acceptance": "BLOCKED",
+    "promotion": "BLOCKED_PENDING_WINDOWS_TESTS_INDEPENDENT_TRUST_AND_GENUINE_EVIDENCE"
+  },
+  "safety": {"civil_nx_calls": 0, "production_modifications": 0, "model_writes": 0, "model_saves": 0}
+}

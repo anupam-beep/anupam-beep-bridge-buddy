@@ -1,0 +1,56 @@
+{
+  "skill_id": "civil_nx_e1_e6_offline_signed_capture_checkpoint_cross_reference",
+  "status": "CANDIDATE_NOT_CERTIFIED",
+  "lessons": [
+    {
+      "id": "XR-01",
+      "failure": "All E1-E6 files are present",
+      "rule": "Presence is not proof of integrity, identity or live analysis."
+    },
+    {
+      "id": "XR-02",
+      "failure": "Two files claim the same evidence gate",
+      "rule": "Reject ambiguous or duplicate gate mappings."
+    },
+    {
+      "id": "XR-03",
+      "failure": "Hash matches manifest but differs from supplied original bytes",
+      "rule": "Reject; the claimed file and independently supplied evidence must be byte-bound."
+    },
+    {
+      "id": "XR-04",
+      "failure": "Claimed capture ID differs from signed receipt or handoff",
+      "rule": "Reject the entire evidence chain."
+    },
+    {
+      "id": "XR-05",
+      "failure": "Anchor signer is also analysis or capture signer",
+      "rule": "Reject role-key reuse even when all signatures verify."
+    },
+    {
+      "id": "XR-06",
+      "failure": "Independently pinned registry does not include the signed capture",
+      "rule": "Hold; local registry rows are not proof of inclusion."
+    },
+    {
+      "id": "XR-07",
+      "failure": "HTTP 200 response contains only an empty message",
+      "rule": "Treat result extraction as incomplete, never a numeric result."
+    },
+    {
+      "id": "XR-08",
+      "failure": "Synthetic E1-E6 chain verifies",
+      "rule": "Do not promote to live execution, E7 acceptance or deployed status."
+    },
+    {
+      "id": "XR-09",
+      "failure": "Sensitive request bytes or file paths are used in a failure message",
+      "rule": "Return fixed reason codes only; do not echo payload, secrets or paths."
+    },
+    {
+      "id": "XR-10",
+      "failure": "File changes between hash inventory and later consumption",
+      "rule": "Offline checks do not eliminate race or prove transmitted bytes; require hardened capture and external witness."
+    }
+  ]
+}

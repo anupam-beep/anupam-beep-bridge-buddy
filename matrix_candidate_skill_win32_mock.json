@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "skill_id": "win32_snapshot_fault_injection_dojo",
+  "source_type": "prior_candidate_code_and_synthetic_tests",
+  "external_manuals_ingested": 0,
+  "training_status": "OFFLINE_SIMULATOR_TESTED_NOT_DEPLOYED",
+  "competency_status": "NOT_CERTIFIED",
+  "learning_objective": "Distinguish Win32 API branch/cleanup contract testing from native Windows filesystem security validation",
+  "input_artifacts": ["offline_snapshot_reader.py", "test_windows_win32_mock_dojo.py"],
+  "dojo": {
+    "new_scenarios": 25,
+    "fault_domains": ["drive_root", "open_access", "reparse", "file_type", "hardlink", "read", "size", "metadata_identity", "cleanup"],
+    "pass_condition": "All simulated cases pass and existing regression tests remain green",
+    "negative_controls": ["unsafe roots rejected before CreateFileW", "no write access requested", "handles closed on exceptions", "changed identity rejected"]
+  },
+  "independent_verification": {
+    "current_level": "simulated_call_contract_only",
+    "native_windows_runtime": "NOT_RUN",
+    "civil_nx_result_extraction": "UNVERIFIED",
+    "trusted_capture_provenance": "UNVERIFIED",
+    "engineering_acceptance": false
+  },
+  "promotion_gates": [
+    "Native Windows 10/11 isolated test suite passes",
+    "Filesystem and reparse/race behavior independently reviewed",
+    "Original evidence provenance separately authenticated",
+    "Human approval before any production modification or engineering use"
+  ]
+}

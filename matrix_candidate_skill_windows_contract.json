@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "skill_id": "civil_nx_windows_snapshot_root_contract_hardening",
+  "skill_status": "OFFLINE_TESTED_LINUX_WINDOWS_RUNTIME_NOT_RUN_NOT_DEPLOYED",
+  "category": "evidence_intake_security",
+  "inputs": ["trusted fixed-drive Windows evidence root", "portable relative evidence path"],
+  "outputs": ["bounded SHA-256 and size", "non-sensitive rejection reason code"],
+  "safety_preconditions": [
+    "no Civil NX calls or credentials",
+    "no model write/save/analysis",
+    "no automatic production promotion",
+    "synthetic test data only",
+    "root must be operator-controlled"
+  ],
+  "dojo_exercises": [
+    "reject relative and drive-relative roots",
+    "reject UNC/device/extended-path and traversal roots",
+    "reject DOS device and superscript names",
+    "verify digest without modifying synthetic file",
+    "Windows-only reject hardlinks and reparse points",
+    "Windows-only verify bounded file read"
+  ],
+  "verification": {
+    "linux_regression": "469_PASS_11_WINDOWS_SKIPPED_OF_480",
+    "python_compileall": "PASS",
+    "windows_runtime": "NOT_RUN",
+    "production_integration": "NOT_RUN",
+    "engineering_certification": "BLOCKED"
+  },
+  "promotion_gate": "HUMAN_REVIEW_PLUS_WINDOWS_RUNTIME_PASS_REQUIRED",
+  "provenance": "candidate based on prior offline snapshot ZIP; no approved external manuals ingested"
+}

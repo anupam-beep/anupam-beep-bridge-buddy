@@ -1,0 +1,18 @@
+{
+  "skill_id": "civil_nx_offline_evidence_inventory_e1_e7",
+  "version": "0.1-candidate",
+  "source_class": "inherited_offline_artifacts_and_existing_evidence_matrix",
+  "approved_external_manuals_ingested": 0,
+  "status": "OFFLINE_TESTED_NOT_DEPLOYED",
+  "input_contract": "bounded local ZIP central directory OR sanitized schema-v1 evidence claims + local files",
+  "outputs": ["E1-E7 gate presence summary", "hash continuity flags", "missing evidence flags", "no-certification markers"],
+  "do_not_infer": ["analysis completion", "network transmission", "Civil NX result availability", "independent provenance", "engineering acceptance"],
+  "verification": {
+    "new_dojo_tests": 38,
+    "all_offline_tests": 375,
+    "integrity_verified_inherited_files": 67,
+    "limitations": ["synthetic tests", "no genuine POST/TABLE results", "no independently hosted authority", "no Windows validation"]
+  },
+  "promotion_gate": "BLOCKED_PENDING_AUTHENTIC_COMPLETION_AND_ORIGINAL_BYTE_PROVENANCE_AND_INDEPENDENT_NUMERICAL_CHECK",
+  "safety": ["no live calls", "no model writes", "no saves", "no engineering auto-certification"]
+}

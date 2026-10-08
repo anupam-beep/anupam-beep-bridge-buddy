@@ -1,0 +1,15 @@
+{
+  "scope": "offline synthetic evidence only",
+  "lessons": [
+    {"code":"HTTP_200_NOT_RESULT","rule":"Do not treat HTTP 200 as proof of successful numerical extraction."},
+    {"code":"EMPTY_KEY_VS_EMPTY_MESSAGE","rule":"An 'empty' wrapper containing HEAD/DATA can be valid; a blank message is not numeric data."},
+    {"code":"REQUEST_ARGUMENT_REQUIRED","rule":"Check Argument and table-specific TABLE_TYPE before interpreting response."},
+    {"code":"FILTER_MISMATCH_POSSIBLE","rule":"Verify exact load-case suffix and node/element selection against independently verified model metadata."},
+    {"code":"CS_CONTEXT_MISMATCH_POSSIBLE","rule":"Construction-stage results may need OPT_CS true and appropriate STAGE_STEP; do not guess stage names."},
+    {"code":"EXPORT_PATH_UNSAFE_FOR_DIAGNOSTIC","rule":"Exclude EXPORT_PATH from safe read-only diagnostic plans because it can create files on the NX host."},
+    {"code":"ANALYSIS_COMPLETION_UNKNOWN","rule":"No result-table shape can substitute for independently authenticated completed-analysis evidence."},
+    {"code":"SYNTHETIC_DATA_NOT_LIVE_PROOF","rule":"Synthetic response shapes cannot establish provenance, result correctness, or engineering acceptance."},
+    {"code":"DO_NOT_LOG_CREDENTIALS","rule":"Reject unexpected envelope fields and output bounded reason codes rather than raw captures."},
+    {"code":"NO_AUTO_RECOVERY","rule":"On incomplete evidence, fail closed; never automatically analyze, save, or mutate the model."}
+  ]
+}

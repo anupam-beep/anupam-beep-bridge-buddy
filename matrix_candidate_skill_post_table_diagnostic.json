@@ -1,0 +1,31 @@
+{
+  "skill_id": "offline_civil_nx_post_table_diagnostic_evidence_matrix",
+  "version": "0.1-offline",
+  "classification": "candidate_not_certified",
+  "knowledge_inputs": [
+    "README_POST_TABLE_OFFLINE_DIAGNOSTIC.md",
+    "README_ORIGINAL_BYTE_ESCROW.md",
+    "official_public_midas_post_table_guidance_consulted_not_approved_for_automatic_skill_promotion"
+  ],
+  "approved_external_manuals_ingested_this_cycle": 0,
+  "actions": [
+    "classify sanitized offline response shape without treating HTTP 200 as success",
+    "distinguish top-level empty wrapper containing HEAD/DATA from empty message response",
+    "check Argument/TABLE_TYPE and flag load-case/element/stage selectors for independent verification",
+    "produce evidence matrix and candidate root-cause hypotheses without asserting root cause"
+  ],
+  "forbidden_actions": [
+    "Civil NX connection, network calls, live POST/TABLE, ANALYZE, model write/save",
+    "requesting or displaying API credentials",
+    "accepting self-attested completion as independent proof",
+    "promoting candidate skill or approving engineering output"
+  ],
+  "dojo_suites": ["test_offline_post_table_diagnostic.py"],
+  "certification": "OFFLINE_TESTED_NOT_DEPLOYED",
+  "deployment_blockers": [
+    "authentic completed-analysis evidence and original-byte capture",
+    "trusted collector/checkpoint infrastructure",
+    "Windows integration/security review and explicit operator authorization",
+    "independent numerical validation and human engineering review"
+  ]
+}

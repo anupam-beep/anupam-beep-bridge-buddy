@@ -1,0 +1,44 @@
+{
+  "skill_id": "civil_nx_e1_e6_offline_signed_capture_checkpoint_cross_reference",
+  "version": "0.1-candidate",
+  "source_class": "inherited_offline_artifacts_only",
+  "approved_external_manuals_ingested_this_cycle": 0,
+  "status": "OFFLINE_TESTED_NOT_DEPLOYED",
+  "required_evidence_gates": [
+    "E1_model_snapshot",
+    "E2_signed_analysis_attestation",
+    "E3_original_request",
+    "E4_original_response",
+    "E5_signed_capture_receipt",
+    "E6_signed_independent_checkpoint"
+  ],
+  "verification_logic": [
+    "exactly_one_artifact_per_E1_E6",
+    "bounded_local_SHA256_inventory",
+    "exact_bytes_to_signed_record_binding",
+    "capture_ID_cross_reference",
+    "analysis_capture_anchor_public_key_separation",
+    "existing_signed_handoff_and_pinned_registry_verification"
+  ],
+  "non_certification_guards": [
+    "E7_not_engineering_accepted",
+    "not_live_verified",
+    "not_result_extraction_verified",
+    "not_proof_of_transmitted_bytes",
+    "not_proof_of_independently_hosted_authority"
+  ],
+  "bridge_dojo": {
+    "new_test_methods": 30,
+    "full_regression_tests": 405,
+    "result": "PASS",
+    "synthetic_only": true
+  },
+  "promotion_gate": "BLOCKED_PENDING_GENUINE_SIGNED_ANALYSIS_CAPTURE_EXTERNAL_TRUST_AND_ENGINEERING_VERIFICATION",
+  "safety": [
+    "no_live_Civil_NX",
+    "no_model_write",
+    "no_model_save",
+    "no_production_change",
+    "no_engineering_acceptance"
+  ]
+}

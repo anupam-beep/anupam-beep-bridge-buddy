@@ -1,0 +1,16 @@
+{
+  "skill_id": "encrypted_original_byte_escrow_and_handoff_binding",
+  "status": "CANDIDATE_ERROR_MEMORY_NOT_DEPLOYED",
+  "lessons": [
+    {"id":"ESC-01","failure":"Redacted request presented as original wire bytes","prevention":"Bind raw SHA-256 from independently supplied handoff manifest; reject redacted hash mismatch."},
+    {"id":"ESC-02","failure":"Ciphertext tampering or wrong decryption key","prevention":"AEAD authentication fails closed without returning plaintext."},
+    {"id":"ESC-03","failure":"Encrypted record swapped between capture IDs","prevention":"Bind random record ID into authenticated associated data and check capture/run IDs inside ciphertext."},
+    {"id":"ESC-04","failure":"World-readable escrow directory or file","prevention":"Reject unsafe POSIX modes and symlinked final components; operator must secure ancestors."},
+    {"id":"ESC-05","failure":"Secret value leaked into logs or error messages","prevention":"Only code-based failures; no raw bytes, identifiers, key or payload in return objects."},
+    {"id":"ESC-06","failure":"Incomplete HTTP 200 response misclassified as successful analysis","prevention":"Escrow match is only byte consistency; signed numerical-result and analysis-completion gates remain mandatory."},
+    {"id":"ESC-07","failure":"Untrusted metadata defines its own handoff policy","prevention":"Require separate trusted v1 manifest with expected domain and version; never infer trust from escrow file."},
+    {"id":"ESC-08","failure":"Prototype filesystem controls assumed valid on Windows","prevention":"Fail closed on non-POSIX platforms pending Windows ACL/reparse/atomic-publish review."},
+    {"id":"ESC-09","failure":"Local ciphertext mistaken for independently witnessed capture","prevention":"Maintain distinct offline-binding, witness, live-analysis and engineering-acceptance states."},
+    {"id":"ESC-10","failure":"Crash leaves a partial or orphaned record","prevention":"Write ciphertext to private temporary file, fsync and atomically publish; require controlled orphan cleanup and independent recovery testing."}
+  ]
+}

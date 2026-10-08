@@ -1,0 +1,36 @@
+{
+  "lessons": [
+    {
+      "failure": "Same test count but substituted tests",
+      "id": "WIN-ID-01",
+      "rule": "Require pinned digest of exact unittest IDs"
+    },
+    {
+      "failure": "Duplicate test IDs mask missing cases",
+      "id": "WIN-ID-02",
+      "rule": "Reject repeated IDs even if count matches"
+    },
+    {
+      "failure": "Test loader silently reports import error as a test",
+      "id": "WIN-ID-03",
+      "rule": "Fail closed when discovered IDs mismatch"
+    },
+    {
+      "failure": "Execution differs from discovery",
+      "id": "WIN-ID-04",
+      "rule": "Record each actually started test ID and compare sets"
+    },
+    {
+      "failure": "Forged native test report with altered suite IDs",
+      "id": "WIN-ID-05",
+      "rule": "Reject report if digest map is incomplete or modified"
+    },
+    {
+      "failure": "Self-declared test lock mistaken for certification",
+      "id": "WIN-ID-06",
+      "rule": "Keep independent_authenticity=false and engineering_accepted=false"
+    }
+  ],
+  "schema_version": 1,
+  "skill_id": "windows_native_test_identity_binding"
+}
